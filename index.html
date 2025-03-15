@@ -14,8 +14,8 @@
             display:block; 
             margin:0 auto; 
             width:150px; 
-            margin-bottom:150px;
             margin-top:20px;
+            margin-bottom:20px;
             border-style:none;
             filter:none; /*그림자효과 제거*/
             -webkit-box-reflect: none !important;  /*확대효과 제거*/
@@ -26,6 +26,25 @@
             flex-direction: column;
             text-align: left;
             text-shadow: 3px 3px 5px gray;
+            margin-bottom:100px;
+        }
+        .showyou{
+            font-size: 3vw;  /* 반응형으로 글씨 크기 조정 */
+            max-width: 90%; /* 반응형 적용 */
+            margin: 0 auto 50px auto; /* 위 0, 좌우 auto, 아래 100px */
+            display: block; /* 블록 요소로 설정 */
+            border-radius:15px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                 "Helvetica Neue", Arial, sans-serif;
+            text-shadow: 3px 3px 5px gray;
+            line-height:2;
+            text-align:center;
+            background-color:rgb(219, 230, 219);
+            font-weight:bold;
+            /*서서히 효과*/
+           opacity: 0; /* 처음엔 숨김 */
+           transform: translateY(50px); /* 아래에서 올라오는 효과 */
+           transition: opacity 1s ease-out, transform 1s ease-out; /*스크롤효과*/
         }
         .routefinder, .scooter, .crawller, .atov {
             display: flex;
@@ -35,7 +54,7 @@
             transform: translateY(50px);
             transition: opacity 1s ease-out, transform 1s ease-out; /*스크롤효과*/
             border-radius:15px;
-            margin-bottom:20px;
+            margin-bottom:200px;
         }
         /*스크롤 효과  javascript에서 스크롤이 감지되면 이것을 불러온다다*/
         .fade-in {
@@ -46,6 +65,7 @@
             display: flex;
             flex-direction: column;
             padding-left: 20px;
+            border-radius:15px;
         }
         .routefinder .title1, .scooter .title2, .crawller .title3, .atov .title4{
             font-size: 8vw;  /* 반응형으로 글씨 크기 조정 */
@@ -153,7 +173,9 @@
             width: 100px; /* 기본 크기보다 줄이기 */
             margin-bottom: 50px; /* 아래 여백도 줄이기 */
               }
-
+              .showyou{
+                font-size:30px;
+              }
             .routefinder, .scooter, .crawller, .atov{
                 flex-direction: column;
                 text-align: center;
@@ -194,7 +216,7 @@
 
        @media (max-width: 480px) { /* 더 작은 모바일 화면 */
         .picture0 {
-        width: 60px; /* 더 작은 화면에서는 더욱 줄이기 */
+        width: 100px; /* 더 작은 화면에서는 더욱 줄이기 */
         margin-bottom: 30px; /* 여백 줄이기 */
          }
         .picture_smp, .picture_sju {
@@ -210,6 +232,10 @@
         <img src="IMG_0005.png" class="picture0" alt="logo">
         </a>
     </div>
+
+    <div class="showyou">
+        autonomous movement
+    </div>
     
     
     <div class="routefinder">
@@ -223,6 +249,10 @@
     </div>
     
     
+    <div class="showyou">
+        safety for scooter
+    </div>
+    
     <div class="scooter">
         <a href="scooter.html">
             <img src="IMG_0267.jpg" class="picture2" alt="Scooter Safety Belt">
@@ -231,6 +261,10 @@
             <h3 class="title2">Scooter Safety Belt</h3>
             <h3 class="discription2">This improves scooter safety.</h3>
         </div>
+    </div>
+    
+    <div class="showyou">
+        new machanism for movement.
     </div>
     
     <div class="crawller">
@@ -242,6 +276,11 @@
             <h3 class="discription3">2 legs, 1 wheel movement.</h3>
         </div>
     </div>
+
+    <div class="showyou">
+        how to overcome obstacles.
+    </div>
+    
     <div class="atov">
         <a href="atov.html">
             <img src="IMG_0004.jpg" class="picture4" alt="atov" align="center";>
@@ -264,7 +303,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const fadeElements = document.querySelectorAll(".routefinder, .scooter, .crawller, .atov");
+            const fadeElements = document.querySelectorAll(".showyou, .routefinder, .scooter, .crawller, .atov");
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
