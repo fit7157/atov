@@ -7,7 +7,15 @@
     <style type="text/css">
         .robo{display:block; margin:0 auto; width:150px; margin-bottom:50px; margin-top:20px;}
         .subtitle{font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:40px; text-align:center;font-style:italic; color:black; background-color:white;}
-        body{font-family:Arial, sans-serif; line-height:1.6; margin:0; padding:0; }
+        body{font-family:Arial, sans-serif; line-height:1.6; margin:0; padding:0; 
+        /*서서히 효과*/
+        opacity:0;/*기본 설정은 안보이게*/
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out; /*스크롤효과*/}
+        .fade-in {
+            opacity: 1 !important;  
+            transform: translateY(0) !important;
+        }
         .heading{display:flex; flex-direction:row;}
         .discription{text-align:center;}
         .picture{max-width:100%; height: auto; border-radius:10px;}
@@ -81,7 +89,7 @@
         This enables it to avoid the crash and go through the route.
         In addition, in order to avoid infinite loop, it is programmed to turn opposite direction when it repeats turning same direction for several times.
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Jc4xdx_2r-w?si=x5sAIqAFF_Tx5mL4" allowfullscreen>
+            <iframe src="https://www.youtube.com/embed/BtnDL3jlhKk" allowfullscreen>
             </iframe>
         </div>
     </p>
@@ -101,5 +109,22 @@
     <a href="https://www.youtube.com/shorts/Jc4xdx_2r-w?si=x5sAIqAFF_Tx5mL4">video</a></br>
     <a href="https://youtube.com/shorts/BtnDL3jlhKk?si=c18cRNXYNDzlPkQz">video2</a>
     <hr/>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeElements = document.querySelectorAll("body");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                        observer.unobserve(entry.target); // 한 번만 실행되도록 설정
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }); // ✅ 모바일에서도 감지되도록 설정
+
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
