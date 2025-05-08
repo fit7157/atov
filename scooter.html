@@ -6,17 +6,20 @@
     <title>Document</title>
     <link href="style.css" type="text/css" rel="stylesheet" />
     <style>
-        body{/*서서히 효과*/
-         opacity:0;/*기본 설정은 안보이게*/
+        body{
+        padding:0 20px;
+            /*서서히 효과*/
+        opacity:0;/*기본 설정은 안보이게*/
         transform: translateY(50px);
-        transition: opacity 1s ease-out, transform 1s ease-out; /*스크롤효과*/}
+        transition: opacity 1.5s ease-out, transform 1.5s ease-out; /*스크롤효과*/}
         .fade-in {
             opacity: 1 !important;  
             transform: translateY(0) !important;
         }
         
-        .robo{display:block; margin:0 auto; width:150px; margin-bottom:50px; margin-top:20px;}
-        h1{background-color:rgba(192, 138, 138, 0.808);color:white; border-radius:10px;}
+        .robo{display:block; margin:0 auto; width:150px; margin-bottom:50px; margin-top:20px; transition: transform 0.3s ease;}
+        .robo:hover{transform:scale(1.2);}/*바나나로고 커지는 효과*/
+        h1{background-color:rgba(192, 138, 138, 0.808);color:white; border-radius:10px; text-align:center;}
         @media (max-width: 768px) 
         {
             .robo {
@@ -43,13 +46,13 @@
     </div>
 <hr/>
     <div id="body">
-        <h1>1. Why e-scooter is easy to overturn.</h1>
+        <h1>Why e-scooter is easy to overturn.</h1>
         <p>first of all I thought about why e-sooters easily go overturn compared to bicycles/<br>
         The main reason that I thought was the fact that the center of mass of the scooter is too high. 
     THe difference between bicycle and e-scooter is that people ride the scooter while they are standing.
 This makes the center of mass in high position and this is why the scooter is easy to overturn. </p>
 
-<h1>2. How can we solve it?</h1>
+<h1>How can we solve it?</h1>
 <p>How can we solve this problem? I thought that it is important for us to lower the center of mass.
     But if we have to ride the scooter while sitting, people will consider it uncomfotable, because 
     people want a scooter that is easy to ride. Standing is one of the key feature of e-scooter so, if we make the 
@@ -57,7 +60,7 @@ This makes the center of mass in high position and this is why the scooter is ea
     Therefore I decided that I should make the people sit only before the crash.
     This will lower the center of mass suddenly and disturb the oversturn.
 </p>
-<h1>3. How to prove it</h1>
+<h1>How to prove it</h1>
 <p>We are going to prove this idea by doing little experiment. 
     By using Arduino, we want to prove that this can work in the real life.
 </p>
@@ -72,7 +75,7 @@ This makes the center of mass in high position and this is why the scooter is ea
     As you can see, the center of mass(G) will be (G') which is lowered compared to the (G).
 
 </p>
-<h1>4. Experiment</h1>
+<h1>Experiment</h1>
     </div>
 
     <script>

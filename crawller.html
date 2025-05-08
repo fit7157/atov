@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/css">
-        .robo{display:block; margin:0 auto; width:150px; margin-bottom:50px; margin-top:20px;}
+        .robo{display:block; margin:0 auto; width:150px; margin-bottom:50px; margin-top:20px; transition: transform 0.3s ease;}
+        .robo:hover{transform:scale(1.2);} /*바나나로고 커지는 효과*/
         .subtitle{font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:40px; text-align:center;font-style:italic; color:black; background-color:white;}       
-        body{font-family:Arial, sans-serif; line-height:1.6; margin:0; padding:0; 
+        body{font-family:Arial, sans-serif; line-height:1.6; margin:0; padding:0 10px; 
             opacity:0;/*기본 설정은 안보이게*/
             transform: translateY(50px);
-            transition: opacity 1s ease-out, transform 1s ease-out; /*스크롤효과*/ }
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out; /*스크롤효과*/ }
         .fade-in {
             opacity: 1 !important;  
             transform: translateY(0) !important;
@@ -20,7 +21,7 @@
         .picture{max-width:100%; height: auto; border-radius:10px; margin-left:50px; margin-bottom:10px;}
         hr{margin:20px 0;}
         h1{text-align:center; background-color:rgba(192, 138, 138, 0.808); color:white;border-radius:10px;font-size:35px;}
-        h2{background-color:rgba(192, 138, 138, 0.808);color:white; border-radius:10px;}
+        h2{background-color:rgba(192, 138, 138, 0.808);color:white; border-radius:10px; text-align:center;}
         .discription {color:black; background-color:rgb(222, 222, 247);}
         p{border-radius:15px; background-color:rgb(226, 239, 229);}
         @media (max-width: 768px) {
