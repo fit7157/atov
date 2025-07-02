@@ -18,7 +18,6 @@
             margin-bottom:10px;
             border-style:none;
             filter:none; /*그림자효과 제거*/
-           /* -webkit-box-reflect: none !important;  /*확대효과 제거*/
             border-radius:0;
         }
         .heading {
@@ -29,7 +28,7 @@
             margin-bottom:100px;
         }
 
-        .routefinder, .scooter, .crawller, .atov {
+        .routefinder, .scooter, .crawller, .atov, .RiderGuard {
             display: flex;
             align-items: center;
             padding: 20px;
@@ -47,13 +46,13 @@
             opacity: 1 !important;  
             transform: translateY(0) !important;
         }
-        .routefinder .dis1, .scooter .dis2 , .crawller .dis3, .atov .dis4{
+        .routefinder .dis1, .scooter .dis2 , .crawller .dis3, .atov .dis4, .RiderGuard .dis5{
             display: flex;
             flex-direction: column;
             padding-left: 20px;
             border-radius:15px;
         }
-        .routefinder .title1, .scooter .title2, .crawller .title3, .atov .title4{
+        .routefinder .title1, .scooter .title2, .crawller .title3, .atov .title4, .RiderGuard .title5{
             font-size: 8vw;  /* 반응형으로 글씨 크기 조정 */
             margin-bottom: 10px;
             margin-top: 20px;
@@ -63,7 +62,7 @@
             text-shadow: 3px 3px 5px gray;
             
         }
-        .discription1, .discription2, .discription3, .discription4{
+        .discription1, .discription2, .discription3, .discription4, .discription5{
             padding-top: 5px;
             background-color:rgb(193, 177, 207);
             border-radius:10px;
@@ -83,6 +82,11 @@
             -webkit-box-reflect: below 0px linear-gradient(to top, rgba(255, 255, 255, 0.105), transparent);
         }
 
+        /*바나나 로고 비치는 효과 제거*/
+        img.picture0 {
+           -webkit-box-reflect: none !important;
+        }
+
         .scooter .title2{
             font-size:6vw;
         }
@@ -96,9 +100,19 @@
             margin-right:120px;
             width:100%;
         }
-        .scooter img, .atov img{
+        .scooter img, .atov img, .RiderGuard img{
             max-width:90%;
         }
+        /*RiderGuard는 사진이 커서 크기만 따로 조정*/
+        .RiderGuard img {
+            width: 450px;    
+            max-width: 90%;
+            height: auto;
+            margin: 0 auto;
+            margin-right:100px;
+        }
+
+
 
         /*하부*/
         .channel .picture_fin{
@@ -159,7 +173,7 @@
             width: 100px; /* 기본 크기보다 줄이기 */
             margin-bottom: 10px; /* 아래 여백도 줄이기 */
               }
-            .routefinder, .scooter, .crawller, .atov{
+            .routefinder, .scooter, .crawller, .atov, .RiderGuard{
                 flex-direction: column;
                 text-align: center;
                 /*스크롤효과*/
@@ -167,22 +181,20 @@
                 transform:translateY(50px);
                 margin-bottom:50px;
             }
-            .routefinder .dis1, .scooter .dis2, .crawller .dis3, .atov .dis4 {
+            .routefinder .dis1, .scooter .dis2, .crawller .dis3, .atov .dis4, .RiderGuard .dis5 {
                 padding-left: 0;
                 margin-top: 15px;
             }
             .scooter .title2, .atov .title4{
                 margin-right: 0;
             }
-            .routefinder img, .scooter img, .crawller img, .atov img{
+            .routefinder img, .scooter img, .crawller img, .atov img , .RiderGuard img{
                 width: 90%;
                 max-width: 400px;
+                margin: 10px auto; /* 모바일에서는 중앙 정렬 */
             }
             .heading .robotics {
                 font-size: 8vw;  /* 모바일에서 글씨 크기 커지게 */
-            }
-            .scooter img, .atov img {
-               margin: 10px auto; /* 모바일에서는 중앙 정렬 */
             }
     
             .dis2, .dis4 {
@@ -258,6 +270,17 @@
     </div>
 
     
+    <div class="RiderGuard">
+        <a href="RiderGuard.html">
+            <img src="IMG_0007.jpg" class="picture5" alt="RiderGuard" align:center;>
+        </a>
+        <div class="dis5">
+            <h3 class="title5">Rider Guard</h3>
+            <h3 class="discription5">Portable safety device for riders.</h3>
+        </div>
+    </div>
+
+    
     <div class ="bottom_line">
         <a href="https://www.youtube.com/@smpictures1234">
             <img src ="IMG_0002.png" class="picture_smp" alt="SMP">
@@ -269,7 +292,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const fadeElements = document.querySelectorAll(".showyou, .routefinder, .scooter, .crawller, .atov");
+            const fadeElements = document.querySelectorAll(".showyou, .routefinder, .scooter, .crawller, .atov, .RiderGuard");
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
