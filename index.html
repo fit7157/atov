@@ -25,9 +25,32 @@
             flex-direction: column;
             text-align: left;
             text-shadow: 3px 3px 5px gray;
-            margin-bottom:100px;
+            margin-bottom:50px;
         }
-
+        .heading2{
+            text-align:center;
+            padding-bottom:100px;
+            font-size:5vw;
+            font-family: Arial, sans-serif;
+            line-height:100px;
+            font-weight:900;
+            opacity:0;
+            transform:translateY(50px);
+            transition:opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+        .heading3{
+            text-align:center;
+            padding-bottom:200px;
+            font-size:2vw;
+            font-family: Arial, sans-serif;
+            line-height:80px;
+            font-weight:800;
+            text-decoration:underline;
+            text-decoration-color:yellow;
+            opacity:0;
+            transform:translateY(50px);
+            transition:opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
         .routefinder, .scooter, .crawller, .atov, .RiderGuard {
             display: flex;
             align-items: center;
@@ -173,6 +196,15 @@
             width: 100px; /* 기본 크기보다 줄이기 */
             margin-bottom: 10px; /* 아래 여백도 줄이기 */
               }
+            .heading2{
+                font-size:6vw;
+                padding-bottom:30px;
+            }
+            .heading3{
+                font-size:2.5vw;
+                line-height:30px;
+                padding-bottom:50px;
+            }
             .routefinder, .scooter, .crawller, .atov, .RiderGuard{
                 flex-direction: column;
                 text-align: center;
@@ -227,6 +259,17 @@
         <a href="index.html">
         <img src="IMG_0006.png" class="picture0" alt="logo">
         </a>
+    </div>
+
+    <div class="heading2">
+        <p>Back<br/>To<br/>The</br>Basic!</p>
+    </div>
+
+    <div class="heading3">
+        <p>We are Sejong.univ based robot making team.<br/>
+        Our aim is to build robots with AI that we want to make.<br/>
+        Robots are made with only one purpose. "To make us fun."<br/>
+        Check our products below</p>
     </div>
     
     <div class="routefinder">
@@ -292,7 +335,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const fadeElements = document.querySelectorAll(".showyou, .routefinder, .scooter, .crawller, .atov, .RiderGuard");
+            const fadeElements = document.querySelectorAll(".heading2,.heading3, .showyou, .routefinder, .scooter, .crawller, .atov, .RiderGuard");
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
