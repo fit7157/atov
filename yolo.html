@@ -78,17 +78,15 @@
 
 <body>
     <a href="index.html"><img src="IMG_0006.png" width="50" class="robo" ></a>
-    <h1 class="title">Rider Guard</h1>
-    <h2 class="subtitle">Can we prevent crash in personal mobilities?</h2>
+    <h1 class="title">What is YOLO?</h1>
+    <h2 class="subtitle">YOLO is argorithm for object detection using cameras.</h2>
     
     <div class="heading">
-    <img src="IMG_0009.png" width="200" class="picture">
+    <img src="IMG_0011.png" width="200" class="picture">
     <h2 class="discription">
-        This is a safety gear using ultrasonic sensors.
-        There are 3 functions.<br/>
-        1. LEDs notify drivers where obstacles are and how close they are.<br/>
-        2. Buzzer is activated when obstacles are too close.<br/>
-        3. Headlight warns pedestrians nearby or other drivers by blinking it that it is coming toward them.<br/>
+       YOLO can detect objects by 3-steps.<br/>
+       1.backbone -> 2.neck -> 3.head<br/>
+       Each steps consists of layers. Layers consists of Blocks.
     </h2>
     </div>
   
@@ -97,16 +95,8 @@
     <div class="works">
     <h2>How it works</h2>
     <p> 
-        There are 3 ultrasonic sensors facing front, left and right. What they do is detecting the obstacles.
-        Using Arduino nano, this device can calculate distance between obstacles.
-        LEDs which are attatched at the top light up. Color of the LEDs depends on the distance.<br/>
-        -distance over 5m --> green<br/>
-        -distance between 5m and 3m --> blue<br/>
-        -distance between 3m and 1m --> yellow<br/>
-        -distance under 1m --> red and warning sound<br/>
-        Driver can recognize two information.</br>
-        - How close obstacles are around.</br>
-        - Which direction obstacles exists at.</br>
+        Backbone<br/>
+        Backbone is where image is inputted and analyze the image by pizels.
     </p>
     </div>
 

@@ -51,7 +51,7 @@
             transform:translateY(50px);
             transition:opacity 1.5s ease-out, transform 1.5s ease-out;
         }
-        .routefinder, .scooter, .crawller, .atov, .RiderGuard {
+        .routefinder, .scooter, .crawller, .atov, .RiderGuard, .yolo{
             display: flex;
             align-items: center;
             padding: 20px;
@@ -69,28 +69,26 @@
             opacity: 1 !important;  
             transform: translateY(0) !important;
         }
-        .routefinder .dis1, .scooter .dis2 , .crawller .dis3, .atov .dis4, .RiderGuard .dis5{
+        .routefinder .dis1, .scooter .dis2 , .crawller .dis3, .atov .dis4, .RiderGuard .dis5, .yolo .dis6{
             display: flex;
             flex-direction: column;
             padding-left: 20px;
             border-radius:15px;
         }
-        .routefinder .title1, .scooter .title2, .crawller .title3, .atov .title4, .RiderGuard .title5{
+        .routefinder .title1, .scooter .title2, .crawller .title3, .atov .title4, .RiderGuard .title5, .yolo .title6{
             font-size: 8vw;  /* 반응형으로 글씨 크기 조정 */
             margin-bottom: 10px;
             margin-top: 20px;
             text-align:center;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
                  "Helvetica Neue", Arial, sans-serif;
-            text-shadow: 3px 3px 5px gray;
-            
+            text-shadow: 3px 3px 5px gray; 
         }
-        .discription1, .discription2, .discription3, .discription4, .discription5{
+        .discription1, .discription2, .discription3, .discription4, .discription5, .discription6{
             padding-top: 5px;
             background-color:rgb(193, 177, 207);
             border-radius:10px;
             text-align:center;
-            
         }
    
         img {
@@ -110,32 +108,46 @@
            -webkit-box-reflect: none !important;
         }
 
+        /*scooter 제목 크기 조정*/
         .scooter .title2{
             font-size:6vw;
         }
 
         /*2,4번째 조정*/
-        .scooter , .atov { /*scooter,atov는 거꾸로*/
+        .scooter , .atov, .yolo { /*scooter,atov,yolo는 거꾸로*/
             display:flex;
             flex-direction:row-reverse;
         }
-        .dis2, .dis4{
+        .dis2, .dis4, .dis6{
             margin-right:120px;
             width:100%;
         }
+        /*이미지 크기 조정*/
         .scooter img, .atov img, .RiderGuard img{
             max-width:90%;
         }
-        /*RiderGuard는 사진이 커서 크기만 따로 조정*/
-        .RiderGuard img {
-            width: 450px;    
+        
+        .yolo img /*yolo image  크기,간격 조정*/
+        {
+            width:2000px;
+            margin-left:100px;
+        }
+        .yolo .dis6
+        {
+            margin-left:70px;
+        }
+        
+
+        
+        /*scooter 와 RiderGuard는 사진이 커서 크기만 따로 조정*/
+        .scooter img ,.RiderGuard img {
+            width: 500px;    
             max-width: 90%;
             height: auto;
             margin: 0 auto;
             margin-right:100px;
         }
-
-
+    
 
         /*하부*/
         .channel .picture_fin{
@@ -171,9 +183,6 @@
             filter:none; /*그림자효과 제거*/
             -webkit-box-reflect: none; /*확대효과 제거*/
         }
-        /* hover 시 확대되지 않도록 */
-        .picture_smp:hover, .picture_sju:hover {
-            transform: none;}
 
         .picture_sju{
             max-width: 80px;
@@ -186,7 +195,24 @@
             -webkit-box-reflect: none; /*확대효과 제거*/
         }
 
-        .picture_smp :hover, .picture_sju :hover {
+        .picture_mail{
+            max-width: 100px;
+            height: auto;
+            border-radius: 100%;
+            transition: transform 0.3s ease;
+            border-style:none;
+            margin-top:2px;
+            margin-right:10px;
+            filter:none; /*그림자효과 제거*/
+            -webkit-box-reflect: none; /*확대효과 제거*/
+        }
+
+
+        /* hover 시 확대되지 않도록 */
+        .picture_smp:hover, .picture_sju:hover, .picture_mail:hover{
+            transform: none;}
+
+        .picture_smp :hover, .picture_sju :hover, .picture_mail:hover {
             transform: scale(1.2);
         }
 
@@ -197,15 +223,18 @@
             margin-bottom: 10px; /* 아래 여백도 줄이기 */
               }
             .heading2{
+                font-weight:900;
                 font-size:6vw;
                 padding-bottom:30px;
             }
             .heading3{
-                font-size:2.5vw;
-                line-height:30px;
-                padding-bottom:50px;
+                font-size:3.5vw;
+                line-height:50px;
+                padding-bottom:100px;
+                padding-left:30px;
+                padding-right:30px;
             }
-            .routefinder, .scooter, .crawller, .atov, .RiderGuard{
+            .routefinder, .scooter, .crawller, .atov, .RiderGuard, .yolo{
                 flex-direction: column;
                 text-align: center;
                 /*스크롤효과*/
@@ -213,14 +242,14 @@
                 transform:translateY(50px);
                 margin-bottom:50px;
             }
-            .routefinder .dis1, .scooter .dis2, .crawller .dis3, .atov .dis4, .RiderGuard .dis5 {
+            .routefinder .dis1, .scooter .dis2, .crawller .dis3, .atov .dis4, .RiderGuard .dis5, .yolo .dis6 {
                 padding-left: 0;
                 margin-top: 15px;
             }
-            .scooter .title2, .atov .title4{
+            .scooter .title2, .atov .title4, .yolo .title6{
                 margin-right: 0;
             }
-            .routefinder img, .scooter img, .crawller img, .atov img , .RiderGuard img{
+            .routefinder img, .scooter img, .crawller img, .atov img , .RiderGuard img, .yolo img{
                 width: 90%;
                 max-width: 400px;
                 margin: 10px auto; /* 모바일에서는 중앙 정렬 */
@@ -229,14 +258,19 @@
                 font-size: 8vw;  /* 모바일에서 글씨 크기 커지게 */
             }
     
-            .dis2, .dis4 {
+            .dis2, .dis4, .dis6 {
                 margin: 10px 0; /* 모바일에서 간격 추가 */
+            }
+
+            /*riderguard와 scooter은 세로이미지로 세로길이가 크서 크기 조절*/
+            .RiderGuard img, .scooter img{
+                max-height:350px;
             }
         
        /*smp, sju 그림 반응형 디자인*/
        
        /* 태블릿 및 모바일 */
-        .picture_smp, .picture_sju {
+        .picture_smp, .picture_sju, .picture_mail {
         max-width: 80px; /* 작은 화면에서는 크기를 줄임 */
          }
 
@@ -247,8 +281,8 @@
         width: 100px; /* 더 작은 화면에서는 더욱 줄이기 */
         margin-bottom: 10px; /* 여백 줄이기 */
          }
-        .picture_smp, .picture_sju {
-        max-width: 60px; /* 더 작은 화면에서는 더욱 줄임 */
+        .picture_smp, .picture_sju, .picture_mail {
+        max-width: 50px; /* 더 작은 화면에서는 더욱 줄임 */
          }
          
         }
@@ -262,7 +296,7 @@
     </div>
 
     <div class="heading2">
-        <p>Back<br/>To<br/>The</br>Basic!</p>
+        <p>Back<br/>To<br/>The</br>Basic !</p>
     </div>
 
     <div class="heading3">
@@ -284,7 +318,7 @@
     
     <div class="scooter">
         <a href="scooter.html">
-            <img src="IMG_0267.jpg" class="picture2" alt="Scooter Safety Belt">
+            <img src="IMG_0008.jpg" class="picture2" alt="Scooter Safety Belt">
         </a>
         <div class="dis2">
             <h3 class="title2">Scooter Safety Belt</h3>
@@ -315,11 +349,22 @@
     
     <div class="RiderGuard">
         <a href="RiderGuard.html">
-            <img src="IMG_0007.jpg" class="picture5" alt="RiderGuard" align:center;>
+            <img src="IMG_0009.png" class="picture5" alt="RiderGuard" align:center;>
         </a>
         <div class="dis5">
             <h3 class="title5">Rider Guard</h3>
             <h3 class="discription5">Portable safety device for riders.</h3>
+        </div>
+    </div>
+
+
+    <div class="yolo">
+        <a href="yolo.html">
+            <img src="IMG_0011.png" class="picture6" alt="yolo" align="center";>
+        </a>
+        <div class="dis6">
+            <h3 class="title6">YOLO</h3>
+            <h3 class="discription6">you look only once.</h3>
         </div>
     </div>
 
@@ -331,11 +376,14 @@
         <a href="https://en.sejong.ac.kr/eng/index.do">
             <img src ="sju-log.png" class="picture_sju" alt="SJU">
         </a>
+        <a href="mailto:fit7157@naver.com">
+            <img src = "IMG_0010.png" class="picture_mail" alt="mail">
+        </a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const fadeElements = document.querySelectorAll(".heading2,.heading3, .showyou, .routefinder, .scooter, .crawller, .atov, .RiderGuard");
+            const fadeElements = document.querySelectorAll(".heading2,.heading3, .showyou, .routefinder, .scooter, .crawller, .atov, .RiderGuard, .yolo");
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
